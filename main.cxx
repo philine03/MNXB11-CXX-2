@@ -9,6 +9,30 @@
 using namespace homework;
 
 int main() { 
+    // as 1.1
+    int a = 1, b = 2, c = 3;
+
+    int* a_ptr = &a; 
+    int* b_ptr = &b;
+    int* c_ptr = &c;
+
+    std::cout << a_ptr << " is adress of " << *a_ptr << std::endl;
+    std::cout << b_ptr << " is adress of " << *b_ptr << std::endl;
+    std::cout << c_ptr << " is adress of " << *c_ptr << std::endl;
+    std::cout << "after swaping: \n";
+
+    swap_ptr(a_ptr, b_ptr, c_ptr);
+    std::cout << a_ptr << " is adress of " << *a_ptr << std::endl;
+    std::cout << b_ptr << " is adress of " << *b_ptr << std::endl;
+    std::cout << c_ptr << " is adress of " << *c_ptr << std::endl;
+
+    // as 1.2
+    UniqueData unique = 10;
+    std::cout << "get() method returns: " << unique.get() << std::endl;
+    unique.set(20);
+    std::cout << "after using set(), get() returns: " << unique.get() << std::endl;
+
+
   
 }
 
