@@ -4,11 +4,13 @@
  * */
 
 #include "as1.hpp"
+#include "as2.hpp"
 #include <iostream>
 
 using namespace homework;
 
 int main() { 
+    /*
     // as 1.1
     int a = 1, b = 2, c = 3;
 
@@ -31,6 +33,28 @@ int main() {
     std::cout << "get() method returns: " << unique.get() << std::endl;
     unique.set(20);
     std::cout << "after using set(), get() returns: " << unique.get() << std::endl;
+    */
+
+    // as 2.1
+    Knight knight1("Bob");
+    knight1.setWeapon("sword");
+    knight1.attack();
+    std::cout << "knight 1 is called " << knight1.getName() << ". \n";
+    auto knight2 = knight1.clone();
+    std::cout << "Copied knight 2 is also called " << knight2->getName() << ". \n"; // -> used bacause knight2 is a pointer
+
+    // as 2.2
+    Sorcerer sorcerer1("Merlin");
+    sorcerer1.setAbility("throwing snowball");
+    sorcerer1.attack();
+    std::cout << "sorcerer 1 is called " << sorcerer1.getName() << ". \n";
+    auto sorcerer2 = sorcerer1.clone();
+    std::cout << "Copied sorcerer 2 is also called " << sorcerer2->getName() << ". \n";
+    
+    // as 2.3
+    Duel<Knight, Sorcerer> duel1(&knight1, &sorcerer1);
+    auto winner_ptr = duel1.fight();
+    std::cout << "Winner: " << winner_ptr->getName() << ". \n";
 
 
   
