@@ -16,6 +16,6 @@ int UniqueData::get() const {
 }
 
 void UniqueData::set(int value) {
-*data_ = value; //value that data_ points to is changed to new value. Adress/pointer does not change. 
+*data_ = value; //value that data_ points to is changed to new value. Address/pointer does not change. 
 }
 }; // namespace homework

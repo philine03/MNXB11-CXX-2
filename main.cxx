@@ -10,7 +10,7 @@
 using namespace homework;
 
 int main() { 
-    /*
+    
     // as 1.1
     int a = 1, b = 2, c = 3;
 
@@ -33,7 +33,7 @@ int main() {
     std::cout << "get() method returns: " << unique.get() << std::endl;
     unique.set(20);
     std::cout << "after using set(), get() returns: " << unique.get() << std::endl;
-    */
+    
 
     // as 2.1
     Knight knight1("Bob");
